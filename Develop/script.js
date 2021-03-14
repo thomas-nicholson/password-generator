@@ -45,7 +45,8 @@ function generatePassword() {
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
-
+  if (typeof password === "undefined")
+    return;
   passwordText.value = password;
 
 }
