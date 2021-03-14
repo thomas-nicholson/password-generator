@@ -12,6 +12,12 @@ function generatePassword() {
   var useUpperCase = confirm("Would you like to include uppercase letters in your password?");
   var useNumbers = confirm("Would you like to include numbers in your password?");
   var useSpecialCharacters = confirm("Would you like to include special characters in your password?");
+
+  if (!useLowerCase && !useUpperCase && !useNumbers && !useSpecialCharacters) {
+    alert("Please select at least one character type");
+    return;
+  }
+
   
 }
 
