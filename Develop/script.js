@@ -18,7 +18,27 @@ function generatePassword() {
     return;
   }
 
-  
+  var characters;
+
+  if (useLowerCase) {
+    characters += "abcdefghijklmnopqrstuvwxyz";
+  }
+  if (useUpperCase) {
+    characters += "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  }
+  if (useNumbers) {
+    characters += "0123456789";
+  }
+  if (useSpecialCharacters) {
+    characters += "!#$%&'()*+,-./:;<=>?@[\]^_`{|}~";
+  }
+
+  var result = '';
+  for ( var i = 0; i < length; i++ ) {
+     result += characters.charAt(Math.floor(Math.random() * characters.length));
+  }
+  return result;
+
 }
 
 // Write password to the #password input
