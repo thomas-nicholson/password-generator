@@ -8,6 +8,11 @@ function generatePassword() {
     return;
   }
 
+  var useLowerCase = confirm("Would you like to include lowercase letters in your password?");
+  var useUpperCase = confirm("Would you like to include uppercase letters in your password?");
+  var useNumbers = confirm("Would you like to include numbers in your password?");
+  var useSpecialCharacters = confirm("Would you like to include special characters in your password?");
+  
 }
 
 // Write password to the #password input
